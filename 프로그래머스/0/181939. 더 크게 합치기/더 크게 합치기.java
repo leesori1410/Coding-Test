@@ -1,7 +1,9 @@
 class Solution {
     public int solution(int a, int b) {
         int answer = 0;
-        answer = (Integer.parseInt(Integer.toString(a)+Integer.toString(b))) > (Integer.parseInt(Integer.toString(b)+Integer.toString(a))) ? (Integer.parseInt(Integer.toString(a)+Integer.toString(b))) : (Integer.parseInt(Integer.toString(b)+Integer.toString(a)));
+        int aLong = Integer.parseInt(""+a+b);
+        int bLong = Integer.parseInt(""+b+a);
+        answer = aLong > bLong ? aLong : bLong;
         return answer;
     }
 }
