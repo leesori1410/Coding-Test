@@ -1,12 +1,7 @@
 class Solution {
     public int solution(String my_string, String is_suffix) {
-        int answer = 0;
-        String str="";
-        for(int i=my_string.length()-1; i>=0; i--){
-            str = my_string.charAt(i)+str;
-            if(str.equals(is_suffix))
-                return 1;
-        }
+        boolean tf=my_string.endsWith(is_suffix);
+        int answer = tf==true ? 1 : 0;
         return answer;
     }
 }
