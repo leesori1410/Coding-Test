@@ -1,8 +1,6 @@
 class Solution {
     public String solution(String[] arr) {
-        String answer = "";
-        for(String array : arr)
-            answer+=array;
+        String answer = String.join("", arr);
         return answer;
     }
 }
