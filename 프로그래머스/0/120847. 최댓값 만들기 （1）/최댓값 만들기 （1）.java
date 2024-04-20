@@ -1,13 +1,9 @@
+import java.util.Arrays;
+
 class Solution {
     public int solution(int[] numbers) {
-        int answer = 0;
-        for(int i=0; i<numbers.length; i++){
-            for(int j=i+1; j<numbers.length; j++){
-                if(numbers[i]*numbers[j]>answer){
-                    answer = numbers[i]*numbers[j];
-                }
-            }
-        }
+        Arrays.sort(numbers);
+        int answer = numbers[numbers.length-1]*numbers[numbers.length-2];
         return answer;
     }
 }
