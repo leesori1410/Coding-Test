@@ -1,9 +1,6 @@
 function solution(s) {
-    var answer = '';
+    var answer = '';    
     s = s.split(' ');
-    s.sort(function(a, b){
-        return a-b;
-    });
-    answer = s[0] + ' ' + s[s.length-1];
+    answer = Math.min(...s) + ' ' + Math.max(...s);
     return answer;
 }
